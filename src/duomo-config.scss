@@ -32,17 +32,9 @@ $color-map: (
 
 // Ex:
 //
-// opacity-range: (0, 0.5, 1);
-//
-//   .opacity-0 {
-//     opacity: 0;
-//   }
-//   .opacity-50 {
-//     opacity: 0.5;
-//   }
-//   .opacity-100 {
-//     opacity: 1;
-//   }
+// .opacity-0   { opacity: 0; }
+// .opacity-50  { opacity: 0.5; }
+// .opacity-100 { opacity: 1; }
 //
 // prettier-ignore
 $opacity-range: (
