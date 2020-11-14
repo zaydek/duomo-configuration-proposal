@@ -1,0 +1,12 @@
+{
+	"name": "duomo-configuration-proposal",
+	"license": "MIT",
+	"scripts": {
+		"watch-build": "yarn watch --interval 0.1 'yarn sass --no-charset --no-source-map src/consumer.scss public/out.css' src",
+		"build": "sass --no-charset --no-source-map src/consumer.scss public/out.css"
+	},
+	"devDependencies": {
+		"sass": "^1.29.0",
+		"watch": "^1.0.2"
+	}
+}
