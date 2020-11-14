@@ -1,0 +1,16 @@
+@use "defaults";
+
+@use "config" with (
+	$color-map: defaults.$color-map,
+	$opacity-range: (
+		0,
+		0.5,
+		1,
+	),
+	$breakpoint-map: (
+		xl: defaults.$xl + 64,
+	)
+);
+
+@use "duomo" with ($config: config.$config);
+@use "theme" with ($config: config.$config);
