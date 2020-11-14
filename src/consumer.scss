@@ -1,6 +1,22 @@
-@use "default";
-@use "config" with (
-	$xl: default.$xl + 64,
+// // TODO: Add `headless` or equivalent.
+// @use "config" with (
+// 	$config: (
+// 		separator: ".",
+// 		extend: (
+// 			breakpoints: (
+// 				"2xl": default.$xl + 64
+// 			),
+// 			opacity: (
+// 				0.5
+// 			),
+// 		),
+// 	)
+// );
+
+// $headless: false,
+@use "duomo" with (
+	$separator: ".",
+	$xl: 1344,
 	$opacity-range: (
 		0,
 		0.5,
@@ -8,4 +24,6 @@
 	)
 );
 
-@use "test";
+// @at-root {
+// 	@include duomo.theme(/* ... */);
+// }
