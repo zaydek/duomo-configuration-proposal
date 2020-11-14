@@ -1,0 +1,7 @@
+@use "provider";
+
+@each $v in provider.$opacity-range {
+	.opacity-#{$v * 100} {
+		opacity: #{$v};
+	}
+}

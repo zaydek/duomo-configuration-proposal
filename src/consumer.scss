@@ -1,6 +1,5 @@
 @use "defaults";
-
-@use "config" with (
+@use "provider" with (
 	$color-map: defaults.$color-map,
 	$opacity-range: (
 		0,
@@ -12,5 +11,4 @@
 	)
 );
 
-@use "duomo" with ($config: config.$config);
-@use "theme" with ($config: config.$config);
+@use "test";
