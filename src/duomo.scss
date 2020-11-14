@@ -6,40 +6,11 @@
 
 // https://mothereff.in/css-escapes
 // https://mathiasbynens.be/notes/css-escapes
-$__escape-list: (
-	"\!",
-	'"',
-	"\#",
-	"\$",
-	"\%",
-	"\&",
-	"'",
-	"\(",
-	"\)",
-	"\*",
-	"\+",
-	"\,",
-	"\-",
-	"\.",
-	"\/",
-	"\:",
-	"\;",
-	"\<",
-	"\=",
-	"\>",
-	"\?",
-	"\@",
-	"\[",
-	"\\",
-	"\]",
-	"\^",
-	"\`",
-	"\{",
-	"\|",
-	"\}",
-	"\~"
-);
+//
+// prettier-ignore
+$__escape-list: ("\!", "\"", "\#", "\$", "\%", "\&", "\'", "\(", "\)", "\*", "\+", "\,", "\-", "\.", "\/", "\:", "\;", "\<", "\=", "\>", "\?", "\@", "\[", "\\", "\]", "\^", "\`", "\{", "\|", "\}", "\~");
 
+// TODO: Extract this.
 @function escape($any) {
 	$str: "" + $any;
 	$escaped: "";
@@ -54,6 +25,7 @@ $__escape-list: (
 	@return $escaped;
 }
 
+// TODO: Extract this.
 @function get-ampersand() {
 	@if not & {
 		@return ".";
@@ -61,11 +33,20 @@ $__escape-list: (
 	@return & + escape(config.$separator);
 }
 
+// TODO: Extract this.
+@mixin theme {
+	html {
+		@each $v in config.$opacity-range {
+			--opacity-#{$v * 100}: #{$v};
+		}
+	}
+}
+
 @mixin props {
 	$amp: get-ampersand();
 
 	@each $v in config.$opacity-range {
-		#{$amp}opacity-#{escape($v * 100)} {
+		#{$amp}opacity-#{$v * 100} {
 			opacity: #{$v};
 		}
 	}
