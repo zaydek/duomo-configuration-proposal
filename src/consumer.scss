@@ -1,13 +1,10 @@
-@use "defaults";
-@use "provider" with (
-	$color-map: defaults.$color-map,
+@use "default";
+@use "config" with (
+	$xl: default.$xl + 64,
 	$opacity-range: (
 		0,
 		0.5,
 		1,
-	),
-	$breakpoint-map: (
-		xl: defaults.$xl + 64,
 	)
 );
 

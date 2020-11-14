@@ -1,7 +1,31 @@
-@use "provider";
+@use "config";
 
-@each $v in provider.$opacity-range {
-	.opacity-#{$v * 100} {
-		opacity: #{$v};
+@function get-ampersand() {
+	@if not & {
+		@return ".";
+	}
+	@return & + "\\\:";
+}
+
+@mixin props {
+	$amp: get-ampersand();
+
+	@each $v in config.$opacity-range {
+		#{$amp}opacity-#{$v * 100} {
+			opacity: #{$v};
+		}
+	}
+}
+
+@at-root {
+	@include props;
+	@each $k, $v in config.$breakpoint-map {
+		@media (min-width: #{$v + px}) {
+			.#{$k} {
+				@at-root {
+					@include props;
+				}
+			}
+		}
 	}
 }

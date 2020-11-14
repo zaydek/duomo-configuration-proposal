@@ -1,0 +1,47 @@
+$transparent: transparent !default;
+$currentColor: currentColor !default;
+$black: #000 !default;
+$white: #fff !default;
+$red: #f00 !default;
+$green: #0f0 !default;
+$blue: #00f !default;
+
+$color-map: (
+	transparent: $transparent,
+	currentColor: $currentColor,
+	black: $black,
+	white: $white,
+	red: $red,
+	green: $green,
+	blue: $blue,
+) !default;
+
+// prettier-ignore
+$opacity-range: (
+	0,
+	0.05,
+	0.1,
+	0.15,
+	0.2,
+	0.25,
+	1 - 0.25,
+	1 - 0.2,
+	1 - 0.15,
+	1 - 0.1,
+	1 - 0.05,
+	1 - 0,
+) !default;
+
+$xs: 32 * 16 !default; // ->  512
+$sm: 40 * 16 !default; // ->  640
+$md: 48 * 16 !default; // ->  768
+$lg: 64 * 16 !default; // -> 1024
+$xl: 80 * 16 !default; // -> 1280
+
+$breakpoint-map: (
+	xs: $xs,
+	sm: $sm,
+	md: $md,
+	lg: $lg,
+	xl: $xl,
+) !default;
