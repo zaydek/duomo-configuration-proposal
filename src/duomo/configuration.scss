@@ -32,12 +32,16 @@ $color-map: (
 	blue: $blue,
 ) !default;
 
-@function color($key) {
+@function getter($func-name, $desc-name, $key) {
 	$got: map.get($color-map, $key);
 	@if not $got {
-		@error "color: no color exists for key " + $key;
+		@error $func-name + ": no " + $desc-name + " exists for key " + $key;
 	}
 	@return $got;
+}
+
+@function color($key) {
+	@return getter("color", "color", $key);
 }
 
 // Ex:
