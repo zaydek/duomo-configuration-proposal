@@ -1,3 +1,5 @@
+@use "sass:map";
+
 // Ex:
 //
 // $headless: true;  // Does not build Duomo CSS
@@ -29,6 +31,14 @@ $color-map: (
 	green: $green,
 	blue: $blue,
 ) !default;
+
+@function color($key) {
+	$got: map.get($color-map, $key);
+	@if not $got {
+		@error "color: no color exists for key " + $key;
+	}
+	@return $got;
+}
 
 // Ex:
 //

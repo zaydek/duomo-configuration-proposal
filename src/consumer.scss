@@ -4,9 +4,9 @@
 	$opacity-range: (0, 0.5, 1)
 );
 
-// .green-500 {
-// 	color: color($green-500);
-// }
+.green-500 {
+	color: color(green);
+}
 
 @at-root {
 	@include theming;

@@ -75,6 +75,10 @@
     opacity: 1;
   }
 }
+.green-500 {
+  color: #0f0;
+}
+
 html {
   --opacity-0: 0;
   --opacity-50: 0.5;
