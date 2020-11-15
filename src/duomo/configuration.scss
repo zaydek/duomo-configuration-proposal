@@ -32,18 +32,6 @@ $color-map: (
 	blue: $blue,
 ) !default;
 
-@function getter($func-name, $desc-name, $key) {
-	$got: map.get($color-map, $key);
-	@if not $got {
-		@error $func-name + ": no " + $desc-name + " exists for key " + $key;
-	}
-	@return $got;
-}
-
-@function color($key) {
-	@return getter("color", "color", $key);
-}
-
 // Ex:
 //
 // .opacity-0   { opacity: 0; }
@@ -87,3 +75,21 @@ $breakpoint-map: (
 	lg: $lg,
 	xl: $xl,
 ) !default;
+
+@function getter($name, $key) {
+	$got: map.get($color-map, $key);
+	@if not $got {
+		@error $name + ": no " + $name + " exists for key " + $key;
+	}
+	@return $got;
+}
+
+@function color($key) {
+	@return getter("color", $key);
+}
+@function shadow($key) {
+	@return getter("shadow", $key);
+}
+@function breakpoint($key) {
+	@return getter("breakpoint", $key);
+}
