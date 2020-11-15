@@ -1,6 +1,6 @@
 @use "configuration";
 
-@mixin theming {
+@mixin theme {
 	html {
 		@each $v in configuration.$opacity-range {
 			--opacity-#{$v * 100}: #{$v};

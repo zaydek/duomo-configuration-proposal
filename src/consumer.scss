@@ -1,77 +1,13 @@
-@use "duomo" with (
+@use "duomo" as * with (
 	$separator: ".",
 	$xl: 1344,
 	$opacity-range: (0, 0.5, 1)
 );
 
 .green-500 {
-	color: duomo.escape(duomo.color(green));
-	color: duomo.$green;
+	color: color(green);
 }
-
-$theming: (
-	// --bg-body: (
-	// 	property: background-color,
-	// 	light: duomo.$white,
-	// 	dark: duomo.$blue-gray,
-	// ),
-	--bg-most-important:
-		(
-			property: background-color,
-			light: duomo.$red,
-			dark: duomo.$blue,
-		),
-	--bg-more-important: (
-		property: background-color,
-		light: duomo.$red,
-		dark: duomo.$blue,
-	),
-	--bg-important: (
-		property: background-color,
-		light: duomo.$red,
-		dark: duomo.$blue,
-	),
-	// --bg-less-important: (
-	// 	property: background-color,
-	// 	light: duomo.$blue-gray,
-	// 	dark: duomo.$blue-gray,
-	// ),
-);
-
-@debug $theming;
 
 @at-root {
-	@include duomo.theming;
+	@include theme;
 }
-
-// $theme-map: (
-// 	--bg-body: (
-// 		property: background-color,
-// 		light: tokens.$white,
-// 		dark: tokens.$blue-gray-900,
-// 	),
-// 	--bg-most-important: (
-// 		property: background-color,
-// 		light: tokens.$red-500,
-// 		dark: tokens.$blue-500,
-// 	),
-// 	--bg-more-important: (
-// 		property: background-color,
-// 		light: tokens.$red-400,
-// 		dark: tokens.$blue-600,
-// 	),
-// 	--bg-important: (
-// 		property: background-color,
-// 		light: tokens.$red-300,
-// 		dark: tokens.$blue-700,
-// 	),
-// 	--bg-less-important: (
-// 		property: background-color,
-// 		light: tokens.$blue-gray-300,
-// 		dark: tokens.$blue-gray-700,
-// 	),
-// );
-//
-// @at-root {
-// 	@include provider.theme($theme-map, 400ms, tokens.$ease-out);
-// }
