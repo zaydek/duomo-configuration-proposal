@@ -1,3 +1,30 @@
-@forward "config";
-@forward "duomo";
+@forward "preset";
 @forward "theme";
+
+@use "helpers";
+@use "preset";
+
+@mixin props {
+	$amp: helpers.get-ampersand();
+
+	@each $v in preset.$opacity-range {
+		#{$amp}opacity-#{$v * 100} {
+			opacity: #{$v};
+		}
+	}
+}
+
+@at-root {
+	@if not preset.$headless {
+		@include props;
+		@each $k, $v in preset.$breakpoint-map {
+			@media (min-width: #{$v + px}) {
+				.#{$k} {
+					@at-root {
+						@include props;
+					}
+				}
+			}
+		}
+	}
+}
