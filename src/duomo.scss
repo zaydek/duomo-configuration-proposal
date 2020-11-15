@@ -1,16 +1,10 @@
 @forward "duomo-config";
+@forward "theme";
+
 @use "duomo-config" as config;
 
 @use "escape" as *;
 @use "get-ampersand" as *;
-
-@mixin theme {
-	html {
-		@each $v in config.$opacity-range {
-			--opacity-#{$v * 100}: #{$v};
-		}
-	}
-}
 
 @mixin props {
 	$amp: get-ampersand();

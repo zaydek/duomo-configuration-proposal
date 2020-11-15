@@ -1,0 +1,9 @@
+@use "duomo-config" as config;
+
+@mixin theme {
+	html {
+		@each $v in config.$opacity-range {
+			--opacity-#{$v * 100}: #{$v};
+		}
+	}
+}
