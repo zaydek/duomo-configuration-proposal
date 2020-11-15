@@ -10,6 +10,9 @@
 	@return $got;
 }
 
+@function font($key) {
+	@return __getter("font", $key);
+}
 @function color($key) {
 	@return __getter("color", $key);
 }
