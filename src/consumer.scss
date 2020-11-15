@@ -13,8 +13,12 @@
 	$opacity-range: (0.5)
 );
 
-.green-500 {
-	color: color(green);
+// .green-500 {
+// 	color: color(green);
+// }
+
+.v-#{breakpoint(sm)} {
+	top: 0;
 }
 
 @at-root {
