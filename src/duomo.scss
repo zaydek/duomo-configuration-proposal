@@ -2,16 +2,8 @@
 @use "duomo-config" as config;
 
 @use "escape" as *;
+@use "get-ampersand" as *;
 
-// TODO: Extract this.
-@function get-ampersand() {
-	@if not & {
-		@return ".";
-	}
-	@return & + escape(config.$separator);
-}
-
-// TODO: Extract this.
 @mixin theme {
 	html {
 		@each $v in config.$opacity-range {

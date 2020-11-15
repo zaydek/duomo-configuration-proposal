@@ -1,0 +1,10 @@
+@use "duomo-config" as config;
+
+@use "escape" as *;
+
+@function get-ampersand() {
+	@if not & {
+		@return ".";
+	}
+	@return & + escape(config.$separator);
+}
