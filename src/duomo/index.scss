@@ -2,30 +2,4 @@
 @forward "helpers";
 @forward "theming";
 
-@use "configuration";
-@use "helpers";
-
-@mixin props {
-	$amp: helpers.get-ampersand();
-
-	@each $v in configuration.$opacity-range {
-		#{$amp}opacity-#{$v * 100} {
-			opacity: #{$v};
-		}
-	}
-}
-
-@at-root {
-	@if not configuration.$headless {
-		@include props;
-		@each $k, $v in configuration.$breakpoint-map {
-			@media (min-width: #{$v + px}) {
-				.#{$k} {
-					@at-root {
-						@include props;
-					}
-				}
-			}
-		}
-	}
-}
+@use "builder"; // Do not `@forward`

@@ -12,3 +12,35 @@
 @at-root {
 	@include duomo.theming;
 }
+
+// $theme-map: (
+// 	--bg-body: (
+// 		property: background-color,
+// 		light: tokens.$white,
+// 		dark: tokens.$blue-gray-900,
+// 	),
+// 	--bg-most-important: (
+// 		property: background-color,
+// 		light: tokens.$red-500,
+// 		dark: tokens.$blue-500,
+// 	),
+// 	--bg-more-important: (
+// 		property: background-color,
+// 		light: tokens.$red-400,
+// 		dark: tokens.$blue-600,
+// 	),
+// 	--bg-important: (
+// 		property: background-color,
+// 		light: tokens.$red-300,
+// 		dark: tokens.$blue-700,
+// 	),
+// 	--bg-less-important: (
+// 		property: background-color,
+// 		light: tokens.$blue-gray-300,
+// 		dark: tokens.$blue-gray-700,
+// 	),
+// );
+//
+// @at-root {
+// 	@include provider.theme($theme-map, 400ms, tokens.$ease-out);
+// }
