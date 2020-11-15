@@ -1,0 +1,17 @@
+$transparent: transparent !default;
+$currentColor: currentColor !default;
+$black: #000 !default;
+$white: #fff !default;
+$red: #f00 !default;
+$green: #0f0 !default;
+$blue: #00f !default;
+
+$color-map: (
+	transparent: $transparent,
+	currentColor: $currentColor,
+	black: $black,
+	white: $white,
+	red: $red,
+	green: $green,
+	blue: $blue,
+) !default;

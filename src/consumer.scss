@@ -5,16 +5,10 @@
 );
 
 .green-500 {
-	// color: duomo.color(green);
+	color: duomo.color(green);
 	color: duomo.$green;
 }
 
 @at-root {
 	@include duomo.theming;
 }
-
-// @use "duomo";
-//
-// .a-#{duomo.$sm} {
-// 	a: 0;
-// }

@@ -1,0 +1,21 @@
+$xs: 32 * 16 !default; // ->  512
+$sm: 40 * 16 !default; // ->  640
+$md: 48 * 16 !default; // ->  768
+$lg: 64 * 16 !default; // -> 1024
+$xl: 80 * 16 !default; // -> 1280
+
+// Ex:
+//
+// @media (min-width: #{$xs + px}) { .xs { /* ... */ } }
+// @media (min-width: #{$sm + px}) { .sm { /* ... */ } }
+// @media (min-width: #{$md + px}) { .md { /* ... */ } }
+// @media (min-width: #{$lg + px}) { .lg { /* ... */ } }
+// @media (min-width: #{$xl + px}) { .xl { /* ... */ } }
+//
+$breakpoint-map: (
+	xs: $xs,
+	sm: $sm,
+	md: $md,
+	lg: $lg,
+	xl: $xl,
+) !default;
