@@ -1,9 +1,0 @@
-@use "preset";
-
-@mixin theme {
-	html {
-		@each $v in preset.$opacity-range {
-			--opacity-#{$v * 100}: #{$v};
-		}
-	}
-}

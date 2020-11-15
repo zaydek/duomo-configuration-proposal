@@ -1,13 +1,13 @@
-@forward "preset";
-@forward "theme";
+@forward "configuration";
+@forward "theming";
 
-@use "helpers";
-@use "preset";
+@use "configuration";
+@use "helpers"; // Do not `@forward`
 
 @mixin props {
 	$amp: helpers.get-ampersand();
 
-	@each $v in preset.$opacity-range {
+	@each $v in configuration.$opacity-range {
 		#{$amp}opacity-#{$v * 100} {
 			opacity: #{$v};
 		}
@@ -15,9 +15,9 @@
 }
 
 @at-root {
-	@if not preset.$headless {
+	@if not configuration.$headless {
 		@include props;
-		@each $k, $v in preset.$breakpoint-map {
+		@each $k, $v in configuration.$breakpoint-map {
 			@media (min-width: #{$v + px}) {
 				.#{$k} {
 					@at-root {
