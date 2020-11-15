@@ -1,7 +1,6 @@
 @forward "config";
-@forward "theme";
+@use "config";
 
-@use "config" as config;
 @use "helpers";
 
 @mixin props {
