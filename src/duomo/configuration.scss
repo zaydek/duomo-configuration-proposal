@@ -1,5 +1,3 @@
-@use "sass:map";
-
 // Ex:
 //
 // $headless: true;  // Does not build Duomo CSS
@@ -75,21 +73,3 @@ $breakpoint-map: (
 	lg: $lg,
 	xl: $xl,
 ) !default;
-
-@function getter($name, $key) {
-	$got: map.get($color-map, $key);
-	@if not $got {
-		@error $name + ": no " + $name + " exists for key " + $key;
-	}
-	@return $got;
-}
-
-@function color($key) {
-	@return getter("color", $key);
-}
-@function shadow($key) {
-	@return getter("shadow", $key);
-}
-@function breakpoint($key) {
-	@return getter("breakpoint", $key);
-}
