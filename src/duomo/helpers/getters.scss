@@ -1,8 +1,8 @@
 @use "sass:map";
 
-@use "configuration";
+@use "../configuration";
 
-@function getter($name, $key) {
+@function __getter($name, $key) {
 	$got: map.get(configuration.$color-map, $key);
 	@if not $got {
 		@error $name + ": no " + $name + " exists for key " + $key;
@@ -11,11 +11,11 @@
 }
 
 @function color($key) {
-	@return getter("color", $key);
+	@return __getter("color", $key);
 }
 @function shadow($key) {
-	@return getter("shadow", $key);
+	@return __getter("shadow", $key);
 }
 @function breakpoint($key) {
-	@return getter("breakpoint", $key);
+	@return __getter("breakpoint", $key);
 }

@@ -1,9 +1,9 @@
 @forward "configuration";
-@forward "getters";
+@forward "helpers";
 @forward "theming";
 
 @use "configuration";
-@use "helpers"; // Do not `@forward`
+@use "helpers";
 
 @mixin props {
 	$amp: helpers.get-ampersand();
