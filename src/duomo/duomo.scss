@@ -2,12 +2,10 @@
 @forward "theme";
 
 @use "config" as config;
-
-@use "escape" as *;
-@use "get-ampersand" as *;
+@use "helpers";
 
 @mixin props {
-	$amp: get-ampersand();
+	$amp: helpers.get-ampersand();
 
 	@each $v in config.$opacity-range {
 		#{$amp}opacity-#{$v * 100} {
