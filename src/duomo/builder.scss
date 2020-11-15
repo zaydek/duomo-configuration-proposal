@@ -16,7 +16,7 @@
 		@include props;
 		@each $k, $v in configuration.$breakpoint-map {
 			@media (min-width: #{$v + px}) {
-				.#{$k} {
+				.#{helpers.escape($k)} {
 					@at-root {
 						@include props;
 					}

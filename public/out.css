@@ -27,6 +27,11 @@
     opacity: 0.5;
   }
 }
+@media (min-width: 1344px) {
+  .\2 xl\:opacity-50 {
+    opacity: 0.5;
+  }
+}
 .green-500 {
   color: #0f0;
 }
