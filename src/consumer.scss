@@ -1,25 +1,32 @@
 @use "duomo" as * with (
-	// $separator: ".",
-	// $xl: 1344,
+	$separator: ".",
+	$xl: 1344,
 	$breakpoint-map: (
 		xs: 512,
-		sm: 512 + 128,
-		md: 512 + 128 + 128,
-		lg: 512 + 128 + 128 + 256,
-		xl: 512 + 128 + 128 + 256 + 256,
-		"2xl": 512 + 128 + 128 + 256 + 256 + 64,
+		sm: 640,
+		md: 768,
+		lg: 1024,
+		xl: 1280,
+		"2xl": 1280 + 64,
 	),
-	// $opacity-range: (0, 0.5, 1)
 	$opacity-range: (0.5)
 );
 
-// .green-500 {
-// 	color: color(green);
-// }
-
-.v-#{breakpoint(sm)} {
-	top: 0;
-}
+// Exports:
+//
+// $headless
+// $separator
+//
+// font() and $fonts ($sans-serif, $serif, ...)
+// color() and $colors ($blue-100, $blue-200, ...)
+// shadow() and $shadows ($shadow-xs, $shadow-md, ...)
+// breakpoint() and $breakpoints ($sm, $md, ...)
+// opacity-range
+//
+// escape()
+// get-ampersand()
+//
+// theme()
 
 @at-root {
 	@include theme;

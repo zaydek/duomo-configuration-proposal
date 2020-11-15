@@ -3,39 +3,35 @@
 }
 
 @media (min-width: 512px) {
-  .xs\:opacity-50 {
+  .xs\.opacity-50 {
     opacity: 0.5;
   }
 }
 @media (min-width: 640px) {
-  .sm\:opacity-50 {
+  .sm\.opacity-50 {
     opacity: 0.5;
   }
 }
 @media (min-width: 768px) {
-  .md\:opacity-50 {
+  .md\.opacity-50 {
     opacity: 0.5;
   }
 }
 @media (min-width: 1024px) {
-  .lg\:opacity-50 {
+  .lg\.opacity-50 {
     opacity: 0.5;
   }
 }
 @media (min-width: 1280px) {
-  .xl\:opacity-50 {
+  .xl\.opacity-50 {
     opacity: 0.5;
   }
 }
 @media (min-width: 1344px) {
-  .\2 xl\:opacity-50 {
+  .\2 xl\.opacity-50 {
     opacity: 0.5;
   }
 }
-.v-640 {
-  top: 0;
-}
-
 html {
   --opacity-50: 0.5;
 }
