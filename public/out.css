@@ -9,3 +9,74 @@
 .opacity-100 {
   opacity: 1;
 }
+
+@media (min-width: 512px) {
+  .xs\.opacity-0 {
+    opacity: 0;
+  }
+
+  .xs\.opacity-50 {
+    opacity: 0.5;
+  }
+
+  .xs\.opacity-100 {
+    opacity: 1;
+  }
+}
+@media (min-width: 640px) {
+  .sm\.opacity-0 {
+    opacity: 0;
+  }
+
+  .sm\.opacity-50 {
+    opacity: 0.5;
+  }
+
+  .sm\.opacity-100 {
+    opacity: 1;
+  }
+}
+@media (min-width: 768px) {
+  .md\.opacity-0 {
+    opacity: 0;
+  }
+
+  .md\.opacity-50 {
+    opacity: 0.5;
+  }
+
+  .md\.opacity-100 {
+    opacity: 1;
+  }
+}
+@media (min-width: 1024px) {
+  .lg\.opacity-0 {
+    opacity: 0;
+  }
+
+  .lg\.opacity-50 {
+    opacity: 0.5;
+  }
+
+  .lg\.opacity-100 {
+    opacity: 1;
+  }
+}
+@media (min-width: 1344px) {
+  .xl\.opacity-0 {
+    opacity: 0;
+  }
+
+  .xl\.opacity-50 {
+    opacity: 0.5;
+  }
+
+  .xl\.opacity-100 {
+    opacity: 1;
+  }
+}
+html {
+  --opacity-0: 0;
+  --opacity-50: 0.5;
+  --opacity-100: 1;
+}

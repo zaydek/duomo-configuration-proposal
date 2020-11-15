@@ -1,11 +1,7 @@
 @use "duomo" with (
 	$separator: ".",
 	$xl: 1344,
-	$opacity-range: (
-		0,
-		0.5,
-		1,
-	)
+	$opacity-range: (0, 0.5, 1)
 );
 
 @at-root {

@@ -1,0 +1,54 @@
+@use "sass:list";
+@use "sass:string";
+
+// https://mothereff.in/css-escapes
+// https://mathiasbynens.be/notes/css-escapes
+//
+// prettier-ignore
+$__escape-list: (
+	"\!",
+	"\"",
+	"\#",
+	"\$",
+	"\%",
+	"\&",
+	"\'",
+	"\(",
+	"\)",
+	"\*",
+	"\+",
+	"\,",
+	"\-",
+	"\.",
+	"\/",
+	"\:",
+	"\;",
+	"\<",
+	"\=",
+	"\>",
+	"\?",
+	"\@",
+	"\[",
+	"\\",
+	"\]",
+	"\^",
+	"\`",
+	"\{",
+	"\|",
+	"\}",
+	"\~",
+);
+
+@function escape($any) {
+	$str: "" + $any;
+	$escaped: "";
+	@for $x from 1 through string.length($str) {
+		$ch: string.slice($str, $x, $x);
+		@if list.index($__escape-list, $ch) {
+			$escaped: $escaped + "\\"+ $ch;
+		} @else {
+			$escaped: $escaped + $ch;
+		}
+	}
+	@return $escaped;
+}
