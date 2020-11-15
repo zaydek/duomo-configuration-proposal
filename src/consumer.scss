@@ -1,13 +1,20 @@
-@use "duomo" as * with (
+@use "duomo" with (
 	$separator: ".",
 	$xl: 1344,
 	$opacity-range: (0, 0.5, 1)
 );
 
 .green-500 {
-	color: color(green);
+	// color: duomo.color(green);
+	color: duomo.$green;
 }
 
 @at-root {
-	@include theming;
+	@include duomo.theming;
 }
+
+// @use "duomo";
+//
+// .a-#{duomo.$sm} {
+// 	a: 0;
+// }
